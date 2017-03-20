@@ -1,0 +1,7 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<!--<audio src="http://www.austrator.com/qmusic/uploads/2016092422110834.mp3" name="新霸王别姬"></audio>-->
+<view class="container">
+    <template is="wxParse" data="{{wxParseData:child}}"></template>
+</view>
+

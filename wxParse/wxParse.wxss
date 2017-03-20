@@ -1,0 +1,35 @@
+.h1, .h2, .h3 {
+    font-weight: bold;
+}
+
+.h1 {
+    font-size: 44rpx;
+}
+
+.h2 {
+    font-size: 40rpx;
+}
+
+.h3 {
+    font-size: 36rpx;
+}
+
+.p {
+    font-size: 30rpx;
+    line-height: 1.4em;
+}
+
+.section {
+    margin: 30rpx 0;
+    background: #ccc;
+    padding: 10rpx;
+    font-size: 22rpx;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.img {
+    width: 100%;
+}

@@ -1,0 +1,28 @@
+<template name="wxParse">
+  <block wx:for="{{wxParseData}}" wx:key="">
+    <text wx:if="{{item.tag == 'h1'}}" class="h1">
+      {{item.child[0].text}}
+    </text>
+    <text wx:if="{{item.tag == 'h2'}}" class="h2">
+      {{item.child[0].text}}
+    </text>
+    <text wx:if="{{item.tag == 'h3'}}" class="h3">
+      {{item.child[0].text}}
+    </text>
+    <view wx:if="{{item.tag == 'section'}}" class="section">
+      <text>{{item.child[0].text}}</text>
+    </view>
+    <image src="{{item.attr.src}}" wx-if="{{item.tag == 'img'}}" mode="widthFix" class="img"></image>
+    <text class="small" wx-if="{{item.tag == 'small'}}">{{item.child[0].text}}</text>
+    <video class="video" wx-if="{{item.tag == 'video'}}" src="{{item.attr.src}}"></video>
+    <view wx-if="{{item.tag == 'p'}}" class="p">
+      <template is="wxParse1" data="{{wxParseData:item.child}}"></template>
+    </view>
+  </block>
+</template>
+<template name="wxParse1">
+  <block wx:for="{{wxParseData}}" wx:key="">
+    <text wx:if="{{item.text}}">{{item.text}}</text>
+    <text wx:if="{{item.tag == 'strong'}}" class="strong">{{item.child[0].text}}</text>
+  </block>
+</template>
